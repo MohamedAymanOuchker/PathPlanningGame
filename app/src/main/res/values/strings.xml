@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Path Planning Game</string>
+    <string name="path_planning_game">Path Planning Game</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="obstacle">Obstacle</string>
+    <string name="selected_algorithm_a">Selected Algorithm: A*</string>
+    <string name="steps_n_a">Steps: N/A</string>
+    <string name="cost_n_a">Cost: N/A</string>
+    <string name="calculate_path">Calculate Path</string>
+    <string name="reset_grid">Reset Grid</string>
+    <string name="random_obstacles">Random Obstacles</string>
+    <string name="assign_weights">Assign Weights</string>
+    <string name="clear_all_weights">Clear All Weights</string>
+    <string name="compare_algorithms">Compare Algorithms</string>
+    <string name="grid_size">Grid Size</string>
+    <string name="robot_icon_theme">Robot Icon Theme</string>
+    <string name="path_finding_algorithms">Path Finding Algorithms</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="plan_paths_avoid_obstacles_and_find_the_shortest_way">Plan paths, avoid obstacles, and find the shortest way!</string>
+    <string name="start_game">Start Game</string>
+    <string name="welcome_to_path_planning_game">Welcome to Path Planning Game!</string>
+    <string name="info">Info</string>
+    <string name="save_settings">Save settings</string>
+    <string-array name="grid_sizes">
+        <item>8x8</item>
+        <item>10x10</item>
+        <item>12x12</item>
+    </string-array>
+    <string-array name="robot_themes">
+        <item>Classic Robot</item>
+        <item>Futuristic Robot</item>
+        <item>Car Robot</item>
+    </string-array>
+    <string-array name="pathfinding_algorithms">
+        <item>A*</item>
+        <item>Dijkstra</item>
+        <item>BFS</item>
+        <item>DFS</item>
+    </string-array>
+</resources>

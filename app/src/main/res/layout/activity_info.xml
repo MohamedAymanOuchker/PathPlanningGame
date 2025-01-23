@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Algorithm Information"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Main Title -->
+                <TextView
+                    android:id="@+id/infoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Path Planning Algorithms"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- A* Algorithm Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/astarTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A* Algorithm"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/astarDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="A* is a popular algorithm that combines features of Dijkstra's algorithm and Greedy Best-First Search. It uses a cost function: f(n) = g(n) + h(n), where g(n) is the cost to reach the node, and h(n) is the heuristic estimate to the goal."
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Dijkstra's Algorithm Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/dijkstraTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dijkstra's Algorithm"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/dijkstraDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dijkstra's algorithm finds the shortest path from a source to all other nodes in the graph. It doesn't use heuristics, making it slower than A* in some cases but ensures optimality for all paths."
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- BFS Algorithm Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/bfsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Breadth-First Search (BFS)"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/bfsDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BFS explores all possible paths level by level. It's simple but can be inefficient in large graphs because it doesn't prioritize the shortest path initially."
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- DFS Algorithm Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/dfsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Depth-First Search (DFS)"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/dfsDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DFS explores paths by diving deep into one branch before backtracking. It's not guaranteed to find the shortest path but is memory-efficient compared to BFS."
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Game Elements Section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Game Elements"
+                    android:textSize="20sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Obstacles Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/obstaclesTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Obstacles"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/infoObstacles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Obstacles are grid cells that the robot cannot pass through. They are represented as black squares in the grid."
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Weights Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/weightsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weights"
+                            android:textSize="18sp"
+                            android:textColor="?attr/colorPrimary"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/infoWeights"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Weighted cells represent areas that are harder to traverse. They simulate terrain difficulty and can affect the calculated path."
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
